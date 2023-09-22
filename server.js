@@ -9,6 +9,27 @@ const port = 3000
 // Configure bodyParser for parsing JSON
 app.use(bodyParser.json())
 
+const path = require('path');
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/styles.css', (req, res) => {
+  res.type('text/css');
+  res.sendFile(path.join(__dirname, 'styles.css'));
+});
+
+app.get('/app.js', (req, res) => {
+  res.type('application/javascript');
+  res.sendFile(path.join(__dirname, 'app.js'));
+});
+
+app.get('/static/media/HODLINFO.png', (req, res) => {
+  res.sendFile(path.join(__dirname, 'static/media/HODLINFO.png'));
+});
+
+
 // Database configuration for SQLite3
 const db = knex({
   client: 'sqlite3',

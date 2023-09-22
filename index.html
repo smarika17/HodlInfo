@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HODLINFO</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     
+    <header class="header">
+        <div class="logo-container">
+            <img src="static/media/HODLINFO.png" class="fiat-logo" alt="HODLINFO Logo">
+        </div>
+        <label class="switch" id="theme-toggle-container">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <div id="countdown-container">
+            <div id="countdown-number"></div>
+            <svg>
+              <circle r="18" cx="20" cy="20"></circle>
+            </svg>
+        </div>
+    </div>
+    <a class="telegram-button" href="javascript:void(window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title), '_blank'))">
+        <i></i>
+        <span>Connect</span>
+    </a>
+    </header>
+
+    <!-- Display the highest buying price crypto information outside the table -->
+    <div class="highest-crypto-info">
+        <h2>Highest Buy Price Crypto:</h2>
+        <p id="highestCryptoInfo"></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last Price</th>
+                <th>Buy Price</th>
+                <th>Sell Price</th>
+                <th>Volume</th>
+                <th>Base Unit</th>
+            </tr>
+        </thead>
+        <tbody id="tickerTable">
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    <script src="app.js"></script>
 </body>
 </html>

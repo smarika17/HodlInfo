@@ -1,0 +1,264 @@
+/* Add your style here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Update your style.css */
+/* Default Light Theme */
+/* Rest of your CSS */
+
+/* Apply the theme variables to your HTML elements */
+html, body {
+    background-color: var(#212529);
+    color: var(#fff);
+}
+
+
+/* Set the background color for the entire HTML page */
+html {
+    background-color: #212529; /* Set to the desired background color */
+    height: 100%; /* Ensure html covers the entire viewport height */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Set the body as a relative positioning context */
+    min-height: 100vh; /* Ensure body covers the entire viewport height */
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Style for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for the logo container */
+.logo-container {
+    padding: 10px;
+}
+
+/* Style for the logo image */
+.fiat-logo {
+    max-width: 350px; /* Set the maximum width for the logo to medium size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Style for the table */
+table {
+    width: 100%; /* Make the table cover the entire width of the viewport */
+    border-collapse: collapse;
+    position: absolute; /* Position the table absolutely */
+    bottom: 0; /* Place the table at the bottom of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+table, th, td {
+    border: none; /* Remove borders between table cells */
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* Set the text color of table data cells to white */
+table td {
+    border: none;
+    padding: 8px;
+    text-align: center;
+    color: white; /* Add this line to set the text color to white */
+}
+
+/* Style the table headings */
+table th {
+    background-color: #212529;
+    font-weight: bold; /* Make the text bold */
+    color: gray; /* Set the text color to gray */
+    padding: 8px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Add box shadow to table rows except the header row */
+table tbody tr:not(:first-child) {
+    padding: 20px; /* Add padding to all sides */
+    box-shadow: 0 0 20px rgba(2, 0, 53, 0.5); /* Increase size and change color */
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Style for the highest buying price crypto information */
+.highest-crypto-info {
+    text-align: center;
+    padding: 20px;
+    background-color: hsl(210, 11%, 15%);
+    color: white;
+}
+
+#countdown-container {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 170px; /* Adjust the right position as needed */
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+  
+  #countdown-number {
+    color: white;
+    display: grid;
+    line-height: 40px;
+    position: relative;
+    justify-content: center;
+    transform: translateX(-50%);
+  }
+  
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+  
+  svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    animation: countdown 10s linear infinite forwards;
+  }
+  
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 113px;
+    }
+  }
+  .telegram-button{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 20px;
+    box-sizing: border-box;
+    
+    cursor: pointer;
+    background-color: #0088cc;
+    border-radius: 3px;
+    padding: 3px 6px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.telegram-button:hover{
+    background-color: #007dbb;
+}
+
+.telegram-button:active{
+    background-color: #026698;
+}
+
+.telegram-button i{
+    display: inline-block;
+    height: 12px;
+    width: 14px;
+    vertical-align: middle;
+    margin-right: 2px;
+    
+    background: url('https://telegram.org/img/oauth/tg_button_small.png') no-repeat;
+    background-size: contain;
+}
+
+.telegram-button span{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#theme-toggle-container {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 50px; /* Adjust the right position as needed */
+    margin-left: 10px;
+}
